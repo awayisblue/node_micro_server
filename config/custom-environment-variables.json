@@ -1,0 +1,8 @@
+{
+  "appName": "APP_NAME",
+  "server": {
+    "port": "SERVER_PORT"
+  },
+  "mysql": "MYSQL_URI",
+  "redis": "REDIS_URI"
+}
