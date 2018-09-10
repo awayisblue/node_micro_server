@@ -4,5 +4,6 @@
     "port": 3001
   },
   "mysql": "mysql://root:root@192.168.0.150/project-test?charset=utf8mb4&timezone=-0700",
-  "redis": "redis://:root@192.168.0.150:6379/10"
+  "redis": "redis://:root@192.168.0.150:6379/10",
+  "sentryDSN": "http://test.example.com"
 }
