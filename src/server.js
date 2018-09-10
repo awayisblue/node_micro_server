@@ -16,7 +16,11 @@ app.use(resMiddleware())
 app.use(route.allowedMethods())
 app.use(route.routes())
 
-logger.info(config)
-app.listen(port, () => logger.info(`Listen on ${port}...`, {port}))
+app.on('error', function (err) {
+  logger.error('server exception', err)
+})
+logger.log('server start', {
+  time: new Date().toString()
+})
+module.exports = app.listen(port, () => logger.log(`Listen on ${port}...`))
 
-module.exports = app

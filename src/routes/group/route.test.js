@@ -1,7 +1,10 @@
 const supertest = require('supertest')
-const app = require('../../server')
+const server = require('../../server')
+afterAll(() => {
+  server.close()
+})
 test('GET /groups', async () => {
-  const response = await supertest(app.callback()).get('/groups')
+  const response = await supertest(server).get('/groups')
   expect(response.status).toBe(200)
   expect(response.body).toMatchObject({
     code: 0,
@@ -10,7 +13,7 @@ test('GET /groups', async () => {
 })
 
 test('POST /groups', async () => {
-  const response = await supertest(app.callback()).post('/groups').send({group_name:'group'})
+  const response = await supertest(server).post('/groups').send({group_name:'group'})
   expect(response.status).toBe(200)
   expect(response.body).toMatchObject({
     code: 0,

@@ -4,5 +4,6 @@
     "port": "SERVER_PORT"
   },
   "mysql": "MYSQL_URI",
-  "redis": "REDIS_URI"
+  "redis": "REDIS_URI",
+  "sentryDSN": "SENTRY_DSN"
 }
