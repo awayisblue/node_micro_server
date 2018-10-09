@@ -25,8 +25,8 @@ pipeline {
             steps {
                 script {
                     def name = 'node_micro_server'
-                    def registry = 'http://192.168.0.160:5000'
-                    def namespace = 'custom_namespace'
+                    def registry = 'docker.io'
+                    def namespace = 'awayisblue'
                     echo "Deploying to ${name} in ${registry}"
                     docker.withRegistry(registry) {
                         def image = docker.build("${namespace}/${name}:${env.BUILD_ID}")
