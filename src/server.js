@@ -23,4 +23,3 @@ logger.log('server start', {
   time: new Date().toString()
 })
 module.exports = app.listen(port, () => logger.log(`Listen on ${port}...`))
-
