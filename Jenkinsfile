@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     def name = 'node_micro_server'
-                    def registry = 'docker.io'
+                    def registry = 'https://docker.io'
                     def namespace = 'awayisblue'
                     echo "Deploying to ${name} in ${registry}"
                     docker.withRegistry(registry) {
