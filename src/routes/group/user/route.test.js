@@ -13,7 +13,7 @@ test('GET /groups/:id/users', async () => {
 })
 
 test('POST /groups/:id/users', async () => {
-  const response = await supertest(server).post('/groups/1/users').send({user_name:'group'})
+  const response = await supertest(server).post('/groups/1/users').send({user_name: 'group'})
   expect(response.status).toBe(200)
   expect(response.body).toMatchObject({
     code: 0,
